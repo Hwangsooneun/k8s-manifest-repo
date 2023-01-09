@@ -3,21 +3,13 @@ kind: Deployment
 metadata:
   name: test-api
   namespace: default
-  labels: dev
+  labels:
+    env: dev
 spec:
   selector:
     matchLabels:
       app: test-api
-      tier: back
   template:
     metadata:
       labels:
         app: test-api
-        tier: back
-    spec:
-      containers:
-        - name: test-api
-          image: 190594267513.dkr.ecr.ap-northeast-2.amazonaws.com/test-api:latest
-          imagePullPolicy: Always
-          ports:
-            - containerPort: 3000

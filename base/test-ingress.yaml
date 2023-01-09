@@ -17,6 +17,6 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: test-api2
+                name: test-api
                 port:
                   number: 3000
