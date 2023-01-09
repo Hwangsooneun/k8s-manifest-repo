@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 190594267513.dkr.ecr.ap-northeast-2.amazonaws.com/test-api
   newName: 190594267513.dkr.ecr.ap-northeast-2.amazonaws.com/test-api
-  newTag: 5d8c42f4
+  newTag: dc112cc9
 resources:
 - ../../base
 patchesStrategicMerge:
