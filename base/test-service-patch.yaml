@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-api
+  annotations:
+    alb.ingress.kubernetes.io/healthcheck-path: "/"
+  labels:
+    env: dev
+spec:
+  selector:
+    app: test-api
+    tier: back
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 3000
